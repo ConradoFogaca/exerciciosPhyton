@@ -49,6 +49,12 @@ def remove_nome(lista):
     lista.pop()
     print(lista)
 
+def verificar_nome(lista):
+ nome =input("Digite o nome")
+ if nome in lista:
+    print(f"{nome} está na lista!")
+ else:
+    print(f"{nome} não está na lista.")
 
 menu= 1
 lista=[]
@@ -56,6 +62,8 @@ while menu== 1:
     print("O que quer fazer?")
     print("1. Adicionar nomes")
     print("2. Remover Nomes")
+    print("3. Pesquisar Nomes")
+    print("4. Sair")
 
     escolha= int(input("Digite uma ação: "))
 
@@ -65,6 +73,11 @@ while menu== 1:
     elif escolha == 2:
         remove_nome(lista)
         menu+1
+    elif escolha == 3:
+        verificar_nome(lista)
+        menu+1
+    elif escolha == 4:
+        menu = 0
     else:
         print("Digite os numeros de acordo as opções acima")
 
